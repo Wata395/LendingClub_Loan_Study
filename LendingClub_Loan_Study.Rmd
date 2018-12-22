@@ -14,7 +14,6 @@ library(knitr)
 ```
 
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -49,20 +48,68 @@ El estudio se enfoca en clasificar e identificar las relaciones que existen entr
 
 
 ## Data Understanding
-Los datos contiene *47* variables y *42538* observaciones.
+Los datos contiene *143* variables y *42538* observaciones.
 El rango de los datos es del 2007 al 2011.
 
-Las variables que se van a utilizar:
+El diccionario de datos: 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
-kable(myColNames)
+kable(LCDataDictionary)
 ```
 
 
 ## Data Preparation
+Se seleccionarion 47 columnas a utilizar en la exploracion de datos.
 
-## Modeling
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+kable(summary(select(df_loan,1:6)))
 
-## Evaluation
+```
 
-## Conclusion
+
+## Data Mining
+
+### Prestamos por tipo de Solicitud
+El siguiente WordCloud muestra los propositos por los cuales se ha solicitado un prestamo.
+En este se aprecia que **"Consolidacion de Deudas (debyConsolid)"** es el principal proposito por los cuales se solicita un prestamo, seguido por **Tarjetas de Credito** y **Mejoras para el hogar**
+
+![](plots/pourpuseWordCloud.png)
+
+Este WordCloud muestra los titulos ingresados en la solicitud del prestamo por parte de los solicitantes. Se observa que **Consolidacion de deudas** y **Prestamos Personales** son los principales titulos.
+
+![](plots/titleWordCloud.png)
+
+### Prestamos por Longevidad Laboral
+Este boxplot muestra que la mayoria de los solicitantes de prestamos tienen mas de **10 annos** de laborar, despues los de menos de **un anno o 2 annos**.
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+prestamosbyLong
+```
+
+Aca se muestra el plazo de la solicitud de prestamos por el tipo de longevidad laboral, donde se observa la relacion entre el tipo de prestamo por tipo de empleado.
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+percebyLong
+```
+
+### Prestamos por propiedad de vivienda
+Los prestatarios que tienen una hipoteca o que rentan son los mayores solicitantes.
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+prestamosbyHome
+```
+
+
+## Conclusiones
+
+- Para atraer mas mercado se debe enfocar en el area de **Consolidacion de Deudas**
+- Se puede explotar el area de **Prestamos Personales**
+- Las personas de mas de 10 annos y 1-2 annos de longevidad laboral, son los que solicitan mas prestamos.
+- Los prestamos de un plazo de 36 meses son los mas cotizados.
+- Personas que rentan o tienen una hipoteca suelen solicitar mas creditos que los que tienen casa propia.
+
+
+
+
+
+
 
