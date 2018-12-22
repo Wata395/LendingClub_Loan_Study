@@ -12,6 +12,7 @@ require(ggmap)
 require(maps)
 require(mapdata)
 
+
 # Loading Data from csv to dataframes
 pathLoan <- './data/LoanStats3a.csv'
 pathLoanRejected <- './data/RejectStatsA.csv'
@@ -28,7 +29,6 @@ df_loan$next_pymnt_d <- NULL
 df_loan$url <- NULL
 # Clearing Dates for secmentation
 df_loan$Year <- as.numeric(str_extract(df_loan$issue_d, "([0-9]+).*$"))
-
 
 # Grouping data
 
@@ -85,6 +85,8 @@ colnames(CountByHome_ownership)[2] <- "Count"
 CountByHome_ownership <- na.omit(CountByHome_ownership)
 # ordering By Count Desc
 CountByHome_ownership <- CountByHome_ownership[order(-CountByHome_ownership$Count),]
+
+
 
 
 
