@@ -1,5 +1,9 @@
 ---
 title: "Proyecto Final LendingClub Loan Study"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+author:
+- Gerardo Salas Montoya
+- Melissa Villalta Solano
 output: html_document
 ---
 
@@ -18,27 +22,26 @@ library(knitr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-[//]: <> (## Session Information for the Reproducible Research)
+## Session Information for the Reproducible Research
 ```{r, message=FALSE,results='hide',warning=FALSE,echo=FALSE}
 sessionInfo()
 ```
 
 
 
-## DAT001 Lenguajes orientados al análisis de datos
-### Gerardo Salas & Melissa Villalta
+## DAT001 Lenguajes de programacion orientados al análisis de datos
 
 ## Objetivo
-Este es el proyecto final correspondiente al curso "DAT001 Lenguajes orientados al análisis de datos" el cual consiste en desarrollar un proyecto que aplique los temas vistos en clase. 
+Este es el proyecto final correspondiente al curso *DAT001 Lenguajes orientados al análisis de datos* el cual consiste en desarrollar un analisis que aplique los temas vistos en clase. 
 
-El proyecto consiste en seleccionar una base de datos,analizar los datos y definir un objetivo general del proyecto, el cual consiste en solucionar una problema que se pueda resolver por medio de los datos en la base. 
+El proyecto consiste en seleccionar una base de datos, analizar los datos y definir un objetivo general del proyecto, el cual consiste en solucionar un problema que se pueda resolver por medio de los datos en la base. 
 
-*Durante el proyecto, se deben aplicar las técnicas de limpieza de datos y de vectorización que se vieron durante el curso. *
+**Durante el proyecto, se deben aplicar las técnicas de limpieza de datos y de vectorización que se vieron durante el curso. **
 
 ## Business Understanding
 
 Lending Club es una plataforma donde las personas pueden pedir y dar préstamos personales para diferentes tipos de proyectos.
-Lending Club les permite a los prestatarios crear préstamos personales sin garantía entre '$1,000' y $40,000 con un período de préstamo estándar de tres años. 
+Lending Club les permite a los prestatarios crear préstamos personales sin garantía entre **$1,000** y **$40,000** con un período de préstamo estándar de tres años. 
 Los inversores pueden buscar y navegar en las listas de préstamos en el sitio web de Lending Club y seleccionar los préstamos en los que desean invertir en función de la información suministrada sobre el prestatario, el monto del préstamo, el grado del préstamo y el propósito del préstamo. 
 Los inversores hacen dinero con intereses. Lending Club gana dinero al cobrar a los prestatarios una tarifa de originación y a los inversores una tarifa de servicio.
 
