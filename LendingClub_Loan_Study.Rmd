@@ -98,6 +98,12 @@ Los prestatarios que tienen una hipoteca o que rentan son los mayores solicitant
 prestamosbyHome
 ```
 
+### Prestamos por Estado
+Este map muestra la cantidad de prestamos que se han solicitado por el estado.
+Siendo **California, Nueva York, Florida** y **Texas** los top 4.
+
+![](plots/map.png)
+
 
 ## Conclusiones
 
