@@ -102,10 +102,10 @@ mapdata <-  read_excel("./data/CountByState.xlsx")
 ## Creating Map By State/Loan
 ###############################
 
-ggplot(data = mapdata) + 
-  geom_polygon(aes(x = lon, y = lat, fill = mapdata$count, group = mapdata$state), color = "white") + 
-  coord_fixed(1.3) +
-  guides(fill=FALSE)  
+# ggplot(data = mapdata) + 
+#   geom_polygon(aes(x = lon, y = lat, fill = mapdata$count, group = mapdata$state), color = "white") + 
+#   coord_fixed(1.3) +
+#   guides(fill=FALSE)  
 
 
 
